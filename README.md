@@ -23,3 +23,9 @@ Heartware is a project blending hardware and software to enable cashierless shop
 ## User Interfaces
 
 [Placeholder for overview and snapshots of the UI/UX design, and how it enables the service to be easy to use both for customers and workers interacting with it]
+
+## Contributors and Credits
+
+Contributions by Anastasia Spangler, Devon McKee, My Tran, Katherine Outcalt, Ana Mendes, Amal Omar, and Edward Gao.
+
+Thanks to the Seattle University ACM Student Chapter for the Personal Projects Initiative and to the Seattle University Computer Science Department for general support.
