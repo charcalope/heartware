@@ -1,6 +1,9 @@
 def fetch_conductance(row, col):
     return 0
 
+def what_was_put_back():
+    return "cat"
+
 # check if all zeroes
 def basically_zero(change_matrix):
     return False
