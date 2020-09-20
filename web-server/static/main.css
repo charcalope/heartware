@@ -1,0 +1,25 @@
+body {
+	background-color: #800000;
+	
+}
+
+.heartware-center {
+	margin: auto;
+	background-color: #ffffff;
+	width: 40vw;
+	height: 100vh;
+}
+
+.heartware-title {
+	padding: 10px;
+	width: auto;
+}
+
+.heartware-title h1 {
+	text-align: center;
+}
+
+.heartware-textbox {
+	padding: 10px;
+	width: auto;
+}
