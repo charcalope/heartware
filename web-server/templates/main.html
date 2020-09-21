@@ -5,19 +5,41 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 		<link rel="stylesheet" href="{{url_for('static', filename='main.css') }}">
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 		<title>heartware</title>
 	</head>
 	<body>
-		<div class="heartware-center">
+		<!-- <div class="heartware-center">
 			<div class="heartware-title">
 				<h1>Hello, world!</h1>
 			</div>
 			<div class="heartware-textbox">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat nulla, sodales vitae laoreet at, varius non felis. Phasellus pretium dictum scelerisque. Donec vitae aliquet sapien. Nam a volutpat risus, et porta ipsum. Curabitur feugiat pulvinar nisl, ut eleifend tortor tempus sit amet. Suspendisse dictum fermentum consequat. Pellentesque placerat purus id neque varius pellentesque. Vivamus vel congue est. Nam congue tristique cursus. Integer auctor vulputate quam, eget fermentum mauris feugiat quis.</p>		
 			</div>
+		</div> -->
+		<div class="container-fluid">
+			<div class="row">
+				<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+					<div class="sidebar-sticky pt-3">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">Page 1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="">Page 2</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+					<div style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden;">
+						<p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin erat nulla, sodales vitae laoreet at, varius non felis. Phasellus pretium dictum scelerisque. Donec vitae aliquet sapien. Nam a volutpat risus, et porta ipsum. Curabitur feugiat pulvinar nisl, ut eleifend tortor tempus sit amet. Suspendisse dictum fermentum consequat. Pellentesque placerat purus id neque varius pellentesque. Vivamus vel congue est. Nam congue tristique cursus. Integer auctor vulputate quam, eget fermentum mauris feugiat quis.</p></p>
+					</div>
+				</main>
+			</div>
 		</div>
+		<!-- SCRIPT LOADS -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 	</body>
 </html>
