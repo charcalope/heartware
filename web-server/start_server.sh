@@ -8,7 +8,6 @@ export FLASK_APP=server.py
 export FLASK_ENV=development
 
 ## Printing ASCII art
-echo -e "\u001b[5m Starting Heartware web server...\u001b[0m"
 echo -e "\u001b[31m  ▄███████▄   ▄███████▄  "
 echo -e "\u001b[31m ▄█████████████████████▄ "
 echo -e "\u001b[31m ███████████████████████ "
@@ -23,7 +22,7 @@ echo -e "\u001b[31m    █████████████████ �
 echo -e "\u001b[31m     ███████████████     "
 echo -e "\u001b[31m      ▀███████████▀      "
 echo -e "\u001b[0m" 
-echo -e "\u001b[4m -- Starting Heartware web server... -- \u001b[0m"
+echo -e "\u001b[4mStarting Heartware web server...\u001b[0m"
 
 ## Printing hostname
 echo "Hostname:" $(hostname -I)
