@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing</title>
+    <style>
+        * {
+            font-family: AppleGothic;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+            background-color: darkgrey;
+            padding: 10px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
+            background-color: darkgrey;
+            padding: 10px;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-container">
+    <div class="grid-child" style="background-color: limegreen; padding: 10px; text-align: center">
+        <a href="#" style="text-decoration: none; color: white">Shopping</a>
+    </div>
+    <div class="grid-child" style="background-color: lightgrey; padding: 10px; text-align: center">
+        <a href="stocking.html" style="text-decoration: none; color: white">Stocking</a>
+    </div>
+</div>
+<h3>Inventory Overview</h3>
+
+<div class="grid-container2">
+    <div class="grid-child" style="background-color: orange">
+        Image
+    </div>
+    <div class="grid-child" style="background-color: lightgrey">
+        Product Name<br>
+        Qty In Stock: 1
+    </div>
+</div>
+<br>
+<div class="grid-container2">
+    <div class="grid-child" style="background-color: orange">
+        Image
+    </div>
+    <div class="grid-child" style="background-color: lightgrey">
+        Product Name<br>
+        Qty In Stock: 1
+    </div>
+</div>
+
+</body>
+</html>

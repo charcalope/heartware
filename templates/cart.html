@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+    <style>
+        * {
+            font-family: "AppleGothic";
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 20px;
+            background-color: darkgrey;
+            padding: 10px;
+        }
+
+        .header {
+            overflow: hidden;
+            background-color: dimgrey;
+            color: white;
+            padding: 15px 10px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h2 class="logo">Heartware</h2>
+</div>
+
+<h1>Cart</h1>
+
+<div class="grid-container">
+    <div class="grid-child" style="background-color: orange">
+        Image
+    </div>
+    <div class="grid-child" style="background-color: lightgrey">
+        Product Name<br>
+        Price<br>
+        Qty: 1
+    </div>
+</div>
+
+
+</body>
+</html>
