@@ -11,8 +11,8 @@ IF EXIST "venv\" (
     echo Enabling venv...
     call venv\Scripts\activate
     echo Installing requirements from requirements.txt...
-    python.exe -m pip install --upgrade pip
-    python.exe -m pip install -r requirements.txt
+    python3.exe -m pip install --upgrade pip
+    python3.exe -m pip install -r requirements.txt
     echo.
     echo Requirements installed! Starting heartware...
     echo.

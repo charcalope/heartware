@@ -9,7 +9,7 @@ then
 	echo "Enabling venv..."
 	source venv/bin/activate
 	echo "Installing requirements from requirements.txt..."
-	python3 -m pip install -u pip
+	python3 -m pip install --upgrade pip
 	python3 -m pip install -r requirements.txt
 	echo
 	echo "Requirements installed! Starting heartware..."
