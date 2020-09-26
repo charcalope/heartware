@@ -25,9 +25,8 @@ def shutdown_session(exception=None):
     db_session.remove()
 
 @app.route('/')
-def hello_world():
+def home():
     return render_template('home.html')
-
 
 if __name__ == '__main__':
     app.run()
