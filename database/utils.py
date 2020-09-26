@@ -85,7 +85,8 @@ def post_tap_transaction(rfid_tag):
 def customer_login(username, password):
     result = Customer.query.filter(Customer.username == username, Customer.password == password)
     if result:
-        return result.first().id
+        if result.first():
+            return result.first().id
 
 def employee_login(username, password):
     result = Employee.query.filter(Employee.username == username, Employee.password == password)
