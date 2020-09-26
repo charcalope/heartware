@@ -3,3 +3,4 @@
 *.pyo
 # Folders
 __pycache__/
+venv/

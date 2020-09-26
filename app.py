@@ -29,4 +29,5 @@ def home():
     return render_template('home.html')
 
 # Running Flask
-app.run()
+if __name__ == "__main__":
+    app.run()
