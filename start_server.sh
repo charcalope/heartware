@@ -39,7 +39,7 @@ echo -e "\u001b[31m    █████████████████ �
 echo -e "\u001b[31m     ███████████████     "
 echo -e "\u001b[31m      ▀███████████▀      "
 echo
-echo -e "\u001b[4mStarting Heartware web server...\u001b[0m"
+echo -e "\u001b[0mStarting Heartware web server..."
 
 ## Printing hostname
 echo "Hostname:" $(hostname -I)

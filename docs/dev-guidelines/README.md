@@ -16,7 +16,7 @@
 
 ### Board Representation
 
-- When adding new python packages, initialize the venv, `pip install <package>`, and `pip freeze --local > requirements.txt` to update requirements file as necessary
+- When adding new python packages, use the `install_pkg` scripts so the integrity of the requirements.txt file is kept and the packages are installed under the virtual env. 
 
 ### Board Firmware
 
