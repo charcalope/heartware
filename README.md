@@ -8,6 +8,11 @@ Heartware is a project blending hardware and software to enable cashierless shop
 
 [Placeholder for general overall description of project with details on how the hardware and software fit together]
 
+## Docs
+
+- [Usage](docs/usage/README.md)
+- [Development Guidelines](docs/dev-guidelines/README.md)
+
 ## Board Hardware 
 
 [Placeholder for deeper look at the intricacies of the hardware and how it enables the heartware service to track items and user interaction with those items]
