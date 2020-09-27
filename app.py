@@ -6,6 +6,7 @@ from markupsafe import escape
 from board.classes import Board
 from database.beginning import init_db, db_session
 from database.utils import customer_login as db_customer_login
+from database.utils import generate_customer_token
 from apscheduler.schedulers.background import BackgroundScheduler
 
 # Initialize database and board
@@ -36,12 +37,13 @@ def home():
 @app.route('/customer/login', methods=["GET", "POST"])
 def customer_login():
     if request.method == "POST":
-        session["username"] = request.form["username"]
         username = request.form["username"]
         password = request.form["password"]
         if db_customer_login(username, password):
+            token = generate_customer_token(username)
             session["username"] = username
-            session["password"] = password
+            session["token"] = token
+            session["logged_in"] = True
             return redirect(url_for('customer_cart'))
         else:
             return render_template('customer_login.html', error=True)
@@ -54,8 +56,9 @@ def customer_cart():
 ## DEBUG
 @app.route('/logged/in')
 def logged_in():
-    if 'username' in session and 'password' in session:
-        return "Logged in as %s" % escape(session['username'])
+    if 'username' in session and 'token' in session:
+        return '''<p><strong>Logged in as: </strong>{}</p>
+        <p><strong>Session Token:</strong> {}</p>'''.format(escape(session["username"]), escape(session["token"]))
     return "Not logged in!"
 
 # Running Flask

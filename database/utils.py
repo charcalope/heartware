@@ -1,6 +1,10 @@
+import uuid
+from sqlalchemy import update
 from database.models import Employee, Customer, Product, CartItem, Tap
 from database.beginning import db_session
 from datetime import datetime
+
+# Customer Methods
 
 # returns product_id
 def most_recent_product_tap():
@@ -82,16 +86,35 @@ def post_tap_transaction(rfid_tag):
     db_session.add(tap)
     db_session.commit()
 
+# Customer Authentication
+
 def customer_login(username, password):
     result = Customer.query.filter(Customer.username == username, Customer.password == password)
-    if result:
-        if result.first():
-            return result.first().id
+    if result and result.first():
+        return result.first().id
+
+def generate_customer_token(username):
+    token = uuid.uuid4().hex
+    db_session.query(Customer).filter(Customer.username == username).update({Customer.token: token})
+    db_session.commit()
+    return token 
+
+def invalidate_customer_token(username):
+    db_session.query(Customer).filter(Customer.username == username).update({Customer.token: None})
+    db_session.commit()
+
+def invalidate_all_customer_tokens():
+    db_session.query(Customer).update({Customer.token: None})
+    db_session.commit()
+
+# Employee Authentication
 
 def employee_login(username, password):
     result = Employee.query.filter(Employee.username == username, Employee.password == password)
     if result:
         return result.first().id
+
+# Employee Methods
 
 def get_inventory():
     inventory = []

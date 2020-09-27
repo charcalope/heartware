@@ -26,6 +26,7 @@ class Customer(Base):
     rfid_tag = Column(String(40), unique=True)
     username = Column(String(50), unique=True)
     password = Column(String(40))
+    token = Column(String(32), nullable=True)
 
     def __init__(self, username=None, password=None, rfid_tag=None):
         self.username = username

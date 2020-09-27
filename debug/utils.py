@@ -16,7 +16,8 @@ def fetch_customers():
         c = {
             "username": customer.username,
             "password": customer.password,
-            "rfid_tag": customer.rfid_tag
+            "rfid_tag": customer.rfid_tag,
+            "token": customer.token
         }
         customers.append(c)
     return customers

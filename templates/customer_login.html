@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-
-<h1>Customer Login</h1>
-
-<form method="post" action="/customer/login">
-    <input type="text" name="username" placeholder="username"><br>
-    <input type="text" name="password" placeholder="password"><br>
-    <button>Submit</button>
-</form>
-
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <title>heartware - Customer Login</title>
+    </head>
+    <body>
+        <h1>Customer Login</h1>
+        <form method="post" action="/customer/login">
+            <input type="text" name="username" placeholder="username"><br>
+            <input type="text" name="password" placeholder="password"><br>
+            <button>Submit</button>
+        </form>
+    </body>
 </html>
