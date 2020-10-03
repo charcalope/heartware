@@ -102,7 +102,7 @@ def generate_customer_token(username):
 def invalidate_customer_token(username):
     db_session.query(Customer).filter(Customer.username == username).update({Customer.token: None})
     db_session.commit()
-
+    
 def invalidate_all_customer_tokens():
     db_session.query(Customer).update({Customer.token: None})
     db_session.commit()

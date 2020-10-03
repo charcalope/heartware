@@ -1,12 +1,11 @@
 import time
 import atexit
 import os
+import database.utils as db
 from flask import Flask, render_template, session, url_for, request, redirect
 from markupsafe import escape
 from board.classes import Board
 from database.beginning import init_db, db_session
-from database.utils import customer_login as db_customer_login
-from database.utils import generate_customer_token
 from apscheduler.schedulers.background import BackgroundScheduler
 
 # Initialize database and board
@@ -27,6 +26,7 @@ app.secret_key = os.urandom(24)
 # Shutdown DB on app shutdown
 @app.teardown_appcontext
 def shutdown_session(exception=None):
+    db.invalidate_all_customer_tokens()
     db_session.remove()
 
 # Flask route bindings
@@ -39,8 +39,8 @@ def customer_login():
     if request.method == "POST":
         username = request.form["username"]
         password = request.form["password"]
-        if db_customer_login(username, password):
-            token = generate_customer_token(username)
+        if db.customer_login(username, password):
+            token = db.generate_customer_token(username)
             session["username"] = username
             session["token"] = token
             session["logged_in"] = True
@@ -48,6 +48,14 @@ def customer_login():
         else:
             return render_template('customer_login.html', error=True)
     return render_template('customer_login.html')
+
+@app.route('/customer/logout', methods=["POST"])
+def customer_logout():
+    username = escape(session["username"])
+    db.invalidate_customer_token(username)
+    del session["username"]
+    del session["token"]
+    session["logged_in"] = False 
 
 @app.route('/customer/cart')
 def customer_cart():
