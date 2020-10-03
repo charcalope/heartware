@@ -3,9 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <!––<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">––>
-    <!-- changing the html doc -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <style>
+        .header{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+        }
+
+        h1 {
+            font-family: 'Cousine';
+            font-size: 58px;
+            font-weight: bold;
+            color: #333333;
+        }
+        h2 {
+            font-family: 'Cousine';
+            font-size: 30px;
+            color: #5e5e5e;
+            position: absolute;
+            left: 50%;
+            margin-right: -50%;
+            margin-top: 2%;
+            transform: translate(-50%, -50%);
+        }
+        .hWareHome {
+            font-family: 'Orbitron';
+            color: #F53A29;
+            font-size: 62px;
+        }
+        body {
+            background-color: white;
+        }
         a {
             background-color: dodgerblue;
             color: white;
@@ -26,13 +65,11 @@
     </style>
 </head>
 <body>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
-<h1>Welcome to Heartware</h1>
+<div class="header">
+    <h1>Welcome to <span class="hWareHome">Heartware</span></h1>  
+        <h2>Cashierless shopping</h2>
+</div>
+
 <h3>Select A Login</h3>
 <a href="{{ url_for('customer_login')}}">Customer</a><br><br><br>
 <a href="employee_login.html">Employee</a>
