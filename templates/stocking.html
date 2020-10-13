@@ -3,54 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <title>Stocking</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Cousine' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
-        * {
-            font-family: AppleGothic;
+        .navbar-brand{
+            text-transform: uppercase;
+            font-family: 'Orbitron';
+            font-weight: bold;
         }
+        .navbar.navbar-light {
+            border: #5e5e5e;
+        }
+
+        .form-inline{
+            margin-right: 15px;
+        }
+        a {
+            color: white;
+            padding: 1em 1.5em;
+            font-family: 'Cousine';
+        }
+
+        .btn.btn-primary.btn-lg.active{
+            background: red;
+            color: white;
+            border:  red;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        .btn.btn-secondary.btn-lg.active {
+            background:  #5e5e5e;
+            color: white;
+            border: #5e5e5e;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        h3 {
+            font-family: 'Cousine';
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap: 20px;
-            background-color: darkgrey;
-            padding: 10px;
-            color: white;
-            text-transform: uppercase;
-            font-weight: bolder;
+            grid-gap: 5px;
         }
-        .grid-container2 {
+
+        #grid-pic {
+            height: 100px;
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        #gridItemContainer{
+            padding-left: 2px;
+        }
+
+        .card {
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 0px;
+            font-family: 'Cousine';
+        }
+
+        .grid-wrapper {
+            width: 100%;
             display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-gap: 20px;
-            background-color: darkgrey;
-            padding: 10px;
-            color: white;
-            text-transform: uppercase;
-            font-weight: bolder;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-row-gap: 20px;
+            grid-column-gap: 5px;
         }
     </style>
 </head>
 <body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-light bg-transparent border-bottom">
+        <a class="navbar-brand" href="#">
+          <img src="android-chrome-512x512.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          heartware
+        </a>
 
-<div class="grid-container">
-    <div class="grid-child" style="background-color: lightgrey; padding: 10px; text-align: center">
-        <a href="employee_landing.html" style="text-decoration: none; color: white">Shopping</a>
-    </div>
-    <div class="grid-child" style="background-color: limegreen; padding: 10px; text-align: center">
-        <a href="#" style="text-decoration: none; color: white">Stocking</a>
+        <form class="form-inline">
+            <a href="employee_landing.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Shopping</a>
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Stocking</a>
+        </form>    
+    </nav>
+    
+
+<br><h3>Active Product</h3>
+
+<div class="grid-wrapper">
+    <div class="card">
+        <div class="card-body">
+        <div class="card-text">
+            <div class="grid-container">
+                <div class="grid-child" id="gridPicContainer" > 
+                    <img id="grid-pic" src="apple.jpg">
+                </div>
+                <div class="grid-child" id="gridItemContainer">
+                    Apple<br>
+                    Qty: 1
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 </div>
 
-<h3>Active Product</h3>
 
-<div class="grid-container2">
-    <div class="grid-child" style="background-color: orange">
-        Image
-    </div>
-    <div class="grid-child" style="background-color: lightgrey">
-        Product Name<br>
-        Qty In Stock: 1
-    </div>
-</div>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+

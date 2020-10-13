@@ -15,10 +15,16 @@
     <style>
         .header{
             position: absolute;
-            top: 50%;
+            top: 30%;
             left: 50%;
             margin-right: -50%;
             transform: translate(-50%, -50%)
+        }
+
+        .hWareHome {
+            font-family: 'Orbitron';
+            color: #F53A29;
+            font-size: 62px;
         }
 
         h1 {
@@ -37,41 +43,61 @@
             margin-top: 2%;
             transform: translate(-50%, -50%);
         }
-        .hWareHome {
-            font-family: 'Orbitron';
-            color: #F53A29;
-            font-size: 62px;
-        }
-        body {
-            background-color: white;
-        }
-        a {
-            background-color: dodgerblue;
-            color: white;
-            padding: 1em 1.5em;
-            text-decoration: none;
-            text-transform: uppercase;
+
+        .login {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%);
         }
 
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
+        h3 {
+            font-family: 'Cousine';
+            text-align: center;
+            font-size: 18px;
+            color: #5e5e5e;
         }
-        
-        li {
-          display: inline;
+
+        a {
+            color: white;
+            padding: 1em 1.5em;
+            font-family: 'Cousine';
         }
+
+        .btn.btn-primary.btn-lg.active{
+            background: red;
+            color: white;
+            border: red;
+        }
+
+        .btn.btn-secondary.btn-lg.active {
+            background: #5e5e5e;
+            color: white;
+            border: #5e5e5e;
+        }
+
     </style>
 </head>
 <body>
 <div class="header">
     <h1>Welcome to <span class="hWareHome">Heartware</span></h1>  
-        <h2>Cashierless shopping</h2>
+    <h2>Cashierless shopping</h2>
 </div>
 
-<h3>Select A Login</h3>
-<a href="{{ url_for('customer_login')}}">Customer</a><br><br><br>
-<a href="employee_login.html">Employee</a>
+
+<div class="login">
+    <h3>Login As</h3>
+    <a href="{{ url_for('customer_login')}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Customer</a>
+    <a href="employee_login.html" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Employee</a>
+</div>
+
+<!--<a href="{{ url_for('customer_login')}}">Customer</a><br><br><br>
+<a href="employee_login.html">Employee</a>-->
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
